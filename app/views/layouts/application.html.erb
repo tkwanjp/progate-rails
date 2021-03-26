@@ -11,14 +11,22 @@
   </head>
 
   <header>
-		<div class="header-logo"></div>
+		<div class="header-logo">
+			<%= link_to 'Tweet App', '/' %>
+		</div>
 		<div class="header-menus">
-			<li><%= link_to 'Top', '/' %></li>
-	    <li><%= link_to 'About', '/about' %></li>
+		  <li><%= link_to 'About', '/about' %></li>
   	  <li><%= link_to 'Posts', '/posts/index' %></li>
+			<li><%= link_to 'New Tweet', '/posts/new' %></li>
 		</div>
   </header>
   <body>
+		<% if flash[:notice] %>
+			<div class="flash">
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
+
     <%= yield %>
   </body>
 </html>

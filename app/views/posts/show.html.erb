@@ -1,0 +1,16 @@
+<div class="main posts-show">
+  <div class="container">
+    <div class="posts-show-item">
+      <div class="post-user-name">
+				<img src="" alt="">
+				User Name
+			</div>
+			<p><%= @post.content %></p>
+			<div class="post-time"><%= @post.created_at %></div>
+			<div>
+				<%= link_to 'Edit', "/posts/#{@post.id}/edit" %>
+			</div>
+			<div></div>
+		</div>
+	</div>
+</div>

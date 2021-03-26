@@ -1,5 +1,17 @@
-<h1>Index of Posts</h1>
-
-<% @posts.each do |post| %>
-<p><%= link_to lpost.content, "/posts/#{post.id}" %></p>
-<% end %>
+<div class="main posts-index">
+	<div class="container">
+		<% @posts.each do |post| %>
+		<div class="posts-index-item">
+			<div class="post-left">
+				<img src="">
+			</div>
+			<div class="post-right">
+				<div class="post-user-name">
+					post.user_name
+				</div>
+				<%= link_to post.content, "/posts/#{post.id}" %>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
