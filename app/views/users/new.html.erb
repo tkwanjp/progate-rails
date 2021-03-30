@@ -1,0 +1,16 @@
+<div class="main user-new">
+	<div class="container">
+		<div class="form-heading">New User</div>
+		<div class="form users-form">
+			<div class="form-body">
+				<%= form_tag '/users/create' do %>
+					<label value="name">
+					<input name="name">
+					<label value="email">
+					<input name="email">
+					<input type="submit" value="New">
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
