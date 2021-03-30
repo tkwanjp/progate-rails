@@ -36,4 +36,12 @@ class PostsController < ApplicationController
 				render 'posts/edit'
 			end
 		end
+
+		def destroy
+			@post = Post.find_by id: params[:id]
+			if @post.destroy
+				flash[:notice] = 'Your tweet has been deleted.'
+				redirect_to '/posts/index'
+			end
+		end
 end
