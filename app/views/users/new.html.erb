@@ -4,10 +4,10 @@
 		<div class="form users-form">
 			<div class="form-body">
 				<%= form_tag '/users/create' do %>
-					<label value="name">
-					<input name="name">
-					<label value="email">
-					<input name="email">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" required>
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" required>
 					<input type="submit" value="New">
 				<% end %>
 			</div>
